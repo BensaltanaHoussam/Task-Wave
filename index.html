@@ -15,11 +15,11 @@
     <nav class="bg-[#16171B] border-b-[1px] w-full pt-4 pb-4 pl-8 pr-8 flex justify-between decoration-solid ">
     
         <div class="w-24 ml-4">
-            <img src="images/TaskWave_Logo.png" alt="Logo">
+           <a href="#"><img src="images/TaskWave_Logo.png" alt="Logo"></a> 
         </div>
         <div class="text-white mr-4 flex gap-4 ">
             <a href="#"><p class="border-l-2 pl-4 p-2 text-sm ">Houssam Bensaltana</p></a>
-            <a href="#"><i class="bg-transparent rounded-full fa-solid fa-user  p-2 text-white transition-colors hover:duration-700 hover:bg-white hover:text-[#16171B] hover:rounded-full "></i></a>
+            <a href="#"><i class="bg-white  rounded-full fa-solid fa-user  p-2 text-[#16171B] transition-colors hover:duration-700 hover:bg-[#16171B] hover:text-white hover:border-[1px] hover:rounded-full "></i></a>
         </div>
         
 
@@ -27,6 +27,11 @@
 
 
     <div class="grid grid-cols-[auto_1fr]">
+
+
+
+
+
     <aside class="bg-[#16171B] w-64 border-r-[1px] flex flex-col h-screen justify-between pt-16 pl-8 text-sm">
         <div class="text-white">
             <ul class=" flex flex-col gap-8 ">
@@ -42,16 +47,21 @@
          
     </aside>
 
+
+
     <main class="bg-[url('/images/background.jpg')] bg-center">
 
 
-
+<div class=" flex gap-14 pl-12 pt-8">
+        <div class="search">
+            <input type="text" placeholder="Search" class="bg-[#16171B] text-white border-[1px] rounded-md pt-1 pb-1 pl-2 pr-14 " />
+           
+          </div>
+          <div><button class="bg-white text-[#16171B] rounded-md pt-1 pb-1 pl-4 pr-4   hover:bg-[#16171B] hover:text-white hover:rounded-md hover:border-[1px] transition-colors duration-300">Add taches +</button></div>
+</div>
 
         <!-- card taches -->
         <div class="pr-12 pl-12 pt-12 grid grid-cols-3 gap-12">
-
-
-
            
             <div>
                 <h1 class="text-white mb-4 pl-2 border-l-2">To Do</h1>
@@ -68,7 +78,7 @@
             
 
             <div>
-                <h1 class="text-white mb-4 pl-2 border-l-2">To Do</h1>
+                <h1 class="text-white mb-4 pl-2 border-l-2">In Progress</h1>
                <div class="bg-[#FFBEC2] flex flex-col   pt-2 pb-2  gap-3  rounded-2xl ">
                 <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
                     <p>En tant que développeur Front-End, je vais afficher les tâches dans une liste organisée où chaque tâche montrera son titre, sa date d’échéance, et sa priorité visuelle (P1 en rouge, P2 en orange, P3 en vert) pour faciliter la lecture.
@@ -82,7 +92,7 @@
             </div>
 
             <div>
-                <h1 class="text-white mb-4 pl-2 border-l-2">To Do</h1>
+                <h1 class="text-white mb-4 pl-2 border-l-2">Done</h1>
                <div class="bg-[#FF9DA4] flex flex-col   pt-2 pb-2  gap-3  rounded-2xl  ">
                 <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 text-white rounded-2xl transform transition-transform duration-300 hover:scale-105">
                     <p>
@@ -99,6 +109,28 @@
 
     </div>
 
+
+
+
+    <footer class="bg-[#16171B] border-t-[1px] w-full flex justify-around p-14 gap-32">
+
+        <div class="w-24 ml-4">
+            <a href="#"><img src="images/TaskWave_Logo.png" alt="Logo"></a> 
+         </div>
+
+         <div class="text-white text-sm">
+            <ul class=" flex gap-8 ">
+                <li><a href="#" class="">home</a></li>
+                <li><a href="#" class="">Dashboard</a></li>
+                <li><a href="#" class="">Settings</a></li>
+                <li><a href="#" class="">Account</a></li>
+            </ul>
+        </div>
+
+        <div class="text-white text-xs">
+            <p>2024 Codeshogun. All rights reserved </p>
+        </div>
+    </footer>
 
 
     
