@@ -63,16 +63,38 @@
             <div>
                 <h1 class="text-white mb-4 pl-2 border-l-2">To Do</h1>
                <div class="bg-[#FFDEDE] flex flex-col  pt-2 pb-2  gap-3  rounded-2xl rounded-tr-none rounded-br-none overflow-y-scroll h-96">
-                <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg">Task 1</span>
+                    <span>01-11-2024</span>
                     <p>En tant que développeur Front-End, je vais implémenter une page d'accueil présentant la To Do List avec une structure HTML et CSS soignée, en utilisant Tailwind CSS pour assurer une apparence moderne et cohérente sur tous les écrans.</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
                 </div>
-                <div class="bg-[#16171B] text-xs p-4  ml-2 mr-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
-                    <p>En tant que développeur Front-End, je vais créer un modal permettant d'ajouter une nouvelle tâche. Ce modal contiendra des champs pour le titre, la description, un statut (To do, doing, done), la date d’échéance, et la priorité de la tâche (P1, P2, P3). La couleur et le style de chaque tâche afficheront automatiquement sa priorité.
-                    </p>
+                <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg">Task 2</span>
+                    <span>01-11-2024</span>
+                    <p>En tant que développeur Front-End, je vais implémenter une page d'accueil présentant la To Do List avec une structure HTML et CSS soignée, en utilisant Tailwind CSS pour assurer une apparence moderne et cohérente sur tous les écrans.</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
                 </div>
-                <div class="bg-[#16171B] text-xs p-4  ml-2 mr-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
-                    <p>En tant que développeur Front-End, je vais créer un modal permettant d'ajouter une nouvelle tâche. Ce modal contiendra des champs pour le titre, la description, un statut (To do, doing, done), la date d’échéance, et la priorité de la tâche (P1, P2, P3). La couleur et le style de chaque tâche afficheront automatiquement sa priorité.
-                    </p>
+                <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg">Task 3</span>
+                    <span>01-11-2024</span>
+                    <p>En tant que développeur Front-End, je vais implémenter une page d'accueil présentant la To Do List avec une structure HTML et CSS soignée, en utilisant Tailwind CSS pour assurer une apparence moderne et cohérente sur tous les écrans.</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
                 </div>
            
            
@@ -150,7 +172,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="priority" class="block font-medium text-[#16171B]">Priority</label>
-                    <select id="priority" required class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm  focus:border-[#FF9DA4]">
+                    <select id="priority" required class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm  focus:border-[#FF9DA4] ">
                         <option value="P1" class="bg-red-500 text-white ">P1</option>
                         <option value="P2" class="bg-orange-500 text-white">P2</option>
                         <option value="P3" class="bg-green-500 text-white">P3</option>
@@ -160,7 +182,7 @@
           
         </div>
                      
-            <button type="submit" class="mt-4 flex justify-center py-1 px-8 bg-[#16171B]  text-white rounded hover:bg-white hover:text-[#16171B] hover:border-2 hover:border-[#16171B]">Add</button>
+            <button type="submit" id="addTask" class="mt-4 flex justify-center py-1 px-8 bg-[#16171B]  text-white rounded hover:bg-white hover:text-[#16171B] hover:border-2 hover:border-[#16171B]">Add</button>
     
 
             </form>
