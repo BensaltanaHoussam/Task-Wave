@@ -64,7 +64,7 @@
                 <h1 class="text-white mb-4 pl-2 border-l-2">To Do</h1>
                <div class="bg-[#FFDEDE] flex flex-col  pt-2 pb-2  gap-3  rounded-2xl rounded-tr-none rounded-br-none overflow-y-scroll h-96">
                 <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
-                    <span class="text-lg">Task 1</span>
+                    <span class="text-lg font-bold">Task 1</span>
                     <span>01-11-2024</span>
                     <p>En tant que développeur Front-End, je vais implémenter une page d'accueil présentant la To Do List avec une structure HTML et CSS soignée, en utilisant Tailwind CSS pour assurer une apparence moderne et cohérente sur tous les écrans.</p>
                     <span class="options flex justify-end gap-4 hover:cursor-pointer ">
@@ -75,7 +75,7 @@
                     </span>
                 </div>
                 <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
-                    <span class="text-lg">Task 2</span>
+                    <span class="text-lg font-bold">Task 2</span>
                     <span>01-11-2024</span>
                     <p>En tant que développeur Front-End, je vais implémenter une page d'accueil présentant la To Do List avec une structure HTML et CSS soignée, en utilisant Tailwind CSS pour assurer une apparence moderne et cohérente sur tous les écrans.</p>
                     <span class="options flex justify-end gap-4 hover:cursor-pointer ">
@@ -86,7 +86,7 @@
                     </span>
                 </div>
                 <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
-                    <span class="text-lg">Task 3</span>
+                    <span class="text-lg font-bold">Task 3</span>
                     <span>01-11-2024</span>
                     <p>En tant que développeur Front-End, je vais implémenter une page d'accueil présentant la To Do List avec une structure HTML et CSS soignée, en utilisant Tailwind CSS pour assurer une apparence moderne et cohérente sur tous les écrans.</p>
                     <span class="options flex justify-end gap-4 hover:cursor-pointer ">
@@ -143,36 +143,38 @@
             <h1 class="text-xl font-semibold">Add Task</h1>
 
 
-            <form id="taskForm" class="mt-4">
+            <form id="taskForm"  class="mt-4">
 
         <div class="flex justify-between mr-8">
             <div>
                          <div class="mb-8 ">
-                    <label for="title" class="block  font-medium text-[#16171B] ">Title</label>
-                    <input type="text" id="title" required class="mt-1 p-1 text-sm block w-64 border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4] " placeholder="Task Title">
+                    <input type="text" id="title"  class="mt-1 p-1 text-sm block w-64 border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4] " placeholder="Task Title">
+                    <div id="msg" class="text-xs text-red-700 mt-1">
+
+                    </div>
                 </div>
                 <div class="mb-4">
-                    <label for="description" class="block font-medium text-[#16171B]">Description</label>
-                    <textarea id="description" required class="mt-1 p-1 text-xs h-28 block w-64 border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]" placeholder="Task Description"></textarea>
+                   
+                    <textarea id="description"  class="mt-1 p-1 text-xs h-28 block w-64 border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]" placeholder="Task Description"></textarea>
                 </div> 
             </div>
 
             <div>
                           <div class="mb-4">
-                    <label for="status" class="block font-medium text-[#16171B]">Status</label>
-                    <select id="status" required class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]">
+                    
+                    <select id="status"  class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]">
                         <option value="to-do">To Do</option>
                         <option value="doing">In Progress</option>
                         <option value="done">done</option>
                     </select>
                 </div>
                 <div class="mb-4">
-                    <label for="dueDate" class="block  font-medium text-[#16171B]">Deadline</label>
-                    <input type="date" id="dueDate" required class="mt-1 p-1 px-2 text-sm block w-full  border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]">
+                
+                    <input type="date" id="dueDate"  class="mt-1 p-1 px-2 text-sm block w-full  border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]">
                 </div>
                 <div class="mb-4">
-                    <label for="priority" class="block font-medium text-[#16171B]">Priority</label>
-                    <select id="priority" required class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm  focus:border-[#FF9DA4] ">
+                  
+                    <select id="priority"  class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm  focus:border-[#FF9DA4] ">
                         <option value="P1" class="bg-red-500 text-white ">P1</option>
                         <option value="P2" class="bg-orange-500 text-white">P2</option>
                         <option value="P3" class="bg-green-500 text-white">P3</option>
