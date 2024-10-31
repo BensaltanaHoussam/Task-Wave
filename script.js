@@ -69,7 +69,16 @@ let creatTasks = ()=>{
                     </span>
                 </div>
     `;
+    resetForm();
 
+};
+
+//reset fonction
+
+let resetForm = ()=>{
+    title.value ="";
+    dueDate.value ="";
+    description.value ="";
 }
 
 
