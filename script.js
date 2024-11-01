@@ -26,6 +26,7 @@ span.onclick = function() {
 
 
 
+
 // Form submit event listener
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -64,9 +65,12 @@ creatTasks();
 
 let creatTasks = ()=>{
     
+  if(priority.value=="P1"){
     if(status.value=="to-do"){
+
+      
  todoContainer.innerHTML += `
-    <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+    <div class="bg-[#16171B] text-xs border-2 border-red-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
                     <span class="text-lg font-bold">${data.text}</span>
                     <span>${data.date}</span>
                     <p>${data.description}</p>
@@ -77,41 +81,134 @@ let creatTasks = ()=>{
 
                     </span>
                 </div>
-    `;
+    `;}
+    if(status.value=="doing"){
+    inProgressContainair.innerHTML += `
+    <div class="bg-[#16171B] text-xs border-2 border-red-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg font-bold">${data.text}</span>
+                    <span>${data.date}</span>
+                    <p>${data.description}</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
 
-    }else if(status.value=="doing") {
-        inProgressContainair.innerHTML += `
-        <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
-                        <span class="text-lg font-bold">${data.text}</span>
-                        <span>${data.date}</span>
-                        <p>${data.description}</p>
-                        <span class="options flex justify-end gap-4 hover:cursor-pointer ">
-                        
-                            <i class="fa-solid fa-trash hover:text-pink-400"></i>
-                            <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
-    
-                        </span>
-                    </div>
-        `;
-    }else{
-        doneContainer.innerHTML += `
-        <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
-                        <span class="text-lg font-bold">${data.text}</span>
-                        <span>${data.date}</span>
-                        <p>${data.description}</p>
-                        <span class="options flex justify-end gap-4 hover:cursor-pointer ">
-                        
-                            <i class="fa-solid fa-trash hover:text-pink-400"></i>
-                            <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
-    
-                        </span>
-                    </div>
-        `;
-    }
+                    </span>
+                </div>
+    `;}
+    if(status.value=="done"){
+    doneContainer.innerHTML += `
+    <div class="bg-[#16171B] text-xs border-2 border-red-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg font-bold">${data.text}</span>
+                    <span>${data.date}</span>
+                    <p>${data.description}</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
 
-    
+                    </span>
+                </div>
+    `;}
+}
+
+if(priority.value=="P2"){
+    if(status.value=="to-do"){
+
+      
+ todoContainer.innerHTML += `
+    <div class="bg-[#16171B] text-xs border-2 border-orange-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg font-bold">${data.text}</span>
+                    <span>${data.date}</span>
+                    <p>${data.description}</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
+                </div>
+    `;}
+    if(status.value=="doing"){
+    inProgressContainair.innerHTML += `
+    <div class="bg-[#16171B] text-xs border-2 border-orange-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg font-bold">${data.text}</span>
+                    <span>${data.date}</span>
+                    <p>${data.description}</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
+                </div>
+    `;}
+    if(status.value=="done"){
+    doneContainer.innerHTML += `
+    <div class="bg-[#16171B] text-xs border-2 border-orange-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg font-bold">${data.text}</span>
+                    <span>${data.date}</span>
+                    <p>${data.description}</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
+                </div>
+    `;}
+}
+
+
+if(priority.value=="P3"){
+    if(status.value=="to-do"){
+
+      
+ todoContainer.innerHTML += `
+    <div class="bg-[#16171B] text-xs border-2 border-green-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg font-bold">${data.text}</span>
+                    <span>${data.date}</span>
+                    <p>${data.description}</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
+                </div>
+    `;}
+    if(status.value=="doing"){
+    inProgressContainair.innerHTML += `
+    <div class="bg-[#16171B] text-xs border-2 border-green-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg font-bold">${data.text}</span>
+                    <span>${data.date}</span>
+                    <p>${data.description}</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
+                </div>
+    `;}
+    if(status.value=="done"){
+    doneContainer.innerHTML += `
+    <div class="bg-[#16171B] text-xs border-2 border-green-500 p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                    <span class="text-lg font-bold">${data.text}</span>
+                    <span>${data.date}</span>
+                    <p>${data.description}</p>
+                    <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                    
+                        <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                        <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+
+                    </span>
+                </div>
+    `;}
+}
    
     resetForm();
+   
 
 };
 
