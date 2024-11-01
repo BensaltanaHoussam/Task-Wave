@@ -6,8 +6,14 @@ let addTaskForm = document.getElementById("addTask")
 let title = document.getElementById("title");
 let dueDate =document.getElementById("dueDate");
 let description =document.getElementById("description");
+const status = document.getElementById("status");
+const priority = document.getElementById("priority");
 let msg =document.getElementById("msg");
 let todoContainer =document.getElementById("todoContainer");
+let inProgressContainair =document.getElementById("inProgressContainair");
+let doneContainer =document.getElementById("doneContainer"); 
+
+
 
 
 btn.onclick = function() {
@@ -49,6 +55,7 @@ let acceptData = () => {
 data["text"]=title.value;
 data["date"]=dueDate.value;
 data["description"]=description.value;
+
 creatTasks();
 };
 
@@ -56,7 +63,9 @@ creatTasks();
 //affiche data
 
 let creatTasks = ()=>{
-    todoContainer.innerHTML += `
+    
+    if(status.value=="to-do"){
+ todoContainer.innerHTML += `
     <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
                     <span class="text-lg font-bold">${data.text}</span>
                     <span>${data.date}</span>
@@ -69,6 +78,39 @@ let creatTasks = ()=>{
                     </span>
                 </div>
     `;
+
+    }else if(status.value=="doing") {
+        inProgressContainair.innerHTML += `
+        <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                        <span class="text-lg font-bold">${data.text}</span>
+                        <span>${data.date}</span>
+                        <p>${data.description}</p>
+                        <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                        
+                            <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                            <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+    
+                        </span>
+                    </div>
+        `;
+    }else{
+        doneContainer.innerHTML += `
+        <div class="bg-[#16171B] text-xs p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                        <span class="text-lg font-bold">${data.text}</span>
+                        <span>${data.date}</span>
+                        <p>${data.description}</p>
+                        <span class="options flex justify-end gap-4 hover:cursor-pointer ">
+                        
+                            <i class="fa-solid fa-trash hover:text-pink-400"></i>
+                            <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+    
+                        </span>
+                    </div>
+        `;
+    }
+
+    
+   
     resetForm();
 
 };
