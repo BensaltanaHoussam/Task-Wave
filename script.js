@@ -208,7 +208,7 @@ if(priority.value=="P3"){
 }
    
     resetForm();
-   
+    modal.classList.add("hidden");
 
 };
 
