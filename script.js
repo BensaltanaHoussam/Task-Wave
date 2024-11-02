@@ -14,6 +14,7 @@ let doneContainer = document.getElementById("doneContainer");
 let deleteButton = document.getElementById("deleteButton");
 
 let tasks = [];
+let currentEditIndex = null;
 
 btn.onclick = function() {
     modal.classList.remove("hidden");
@@ -43,8 +44,12 @@ let formValidation = () => {
         msg.innerHTML = "Title cannot be blank";
     } else {
         console.log('Success');
-        msg.innerHTML = "";
-        acceptData();
+        msg.innerHTML = ""; 
+        if (currentEditIndex !== null) {
+            updateTask();
+        } else {
+            acceptData();
+        }
     }
 }
 
@@ -79,13 +84,13 @@ let createTasks = () => {
 
     tasks.forEach((task, index) => {
         const taskHTML = `
-            <div class="bg-[#16171B] text-xs border-2 ${getPriorityClass(task.priority)} p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+            <div class="bg-[#16171B] text-xs  border-2 ${getPriorityClass(task.priority)} p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
                 <span class="text-lg font-bold">${task.text}</span>
                 <span>${task.date}</span>
                 <p>${task.description}</p>
                 <span class="options flex justify-end gap-4 hover:cursor-pointer ">
                     <i id="deleteButton" class="fa-solid fa-trash hover:text-pink-400" onclick="deleteTask(${index})"></i>
-                    <i class="fa-solid fa-pen-to-square hover:text-pink-400"></i>
+                    <i class="fa-solid fa-pen-to-square hover:text-pink-400" onclick="editTask(${index})" ></i>
                 </span>
             </div>
         `;
@@ -122,10 +127,44 @@ const getPriorityClass = (priority) => {
 // Delete task function
 let deleteTask = (index) => {
     console.log(index);
-    
     tasks.splice(index, 1); // Remove the task at the specified index
     createTasks(); // Re-render tasks after deletion
 };
+
+
+
+
+// edit task fonction 
+let editTask = (index) => {
+    currentEditIndex = index; 
+    const task = tasks[index];
+
+    title.value = task.text;
+    dueDate.value = task.date;
+    description.value = task.description;
+    status.value = task.status;
+    priority.value = task.priority;
+
+    modal.classList.remove("hidden"); 
+};
+
+// update task fonction
+let updateTask = () => {
+    tasks[currentEditIndex] = {
+        text: title.value,
+        date: dueDate.value,
+        description: description.value,
+        status: status.value,
+        priority: priority.value
+    };
+
+    createTasks();
+    resetForm(); 
+    modal.classList.add("hidden");
+    currentEditIndex = null;
+};
+
+
 
 
 
@@ -134,6 +173,7 @@ let resetForm = () => {
     title.value = "";
     dueDate.value = "";
     description.value = "";
+    currentEditIndex = null;
 };
 
 
