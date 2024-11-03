@@ -16,6 +16,11 @@ let deleteButton = document.getElementById("deleteButton");
 let tasks = [];
 let currentEditIndex = null;
 
+const todoCount = document.getElementById("todoCount");
+const inProgressCount = document.getElementById("inProgressCount");
+const doneCount = document.getElementById("doneCount");
+
+
 btn.onclick = function() {
     modal.classList.remove("hidden");
 }
@@ -84,10 +89,10 @@ let createTasks = () => {
 
     tasks.forEach((task, index) => {
         const taskHTML = `
-            <div class="bg-[#16171B] text-xs  border-2 ${getPriorityClass(task.priority)} p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+            <div class="bg-gradient-to-b from-[#16171B] to-[#2c3144] w-60 text-xs  border-2 ${getPriorityClass(task.priority)} p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
                 <span class="text-lg font-bold">${task.text}</span>
                 <span>${task.date}</span>
-                <p>${task.description}</p>
+                <p class "text-green">${task.description}</p>
                 <span class="options flex justify-end gap-4 hover:cursor-pointer ">
                     <i id="deleteButton" class="fa-solid fa-trash hover:text-pink-400" onclick="deleteTask(${index})"></i>
                     <i class="fa-solid fa-pen-to-square hover:text-pink-400" onclick="editTask(${index})" ></i>
@@ -106,6 +111,7 @@ let createTasks = () => {
 
     resetForm();
     modal.classList.add("hidden");
+    updateCounters();
     
     
 };
@@ -129,6 +135,7 @@ let deleteTask = (index) => {
     console.log(index);
     tasks.splice(index, 1); // Remove the task at the specified index
     createTasks(); // Re-render tasks after deletion
+    updateCounters();
 };
 
 
@@ -145,6 +152,7 @@ let editTask = (index) => {
     status.value = task.status;
     priority.value = task.priority;
 
+    
     modal.classList.remove("hidden"); 
 };
 
@@ -162,6 +170,8 @@ let updateTask = () => {
     resetForm(); 
     modal.classList.add("hidden");
     currentEditIndex = null;
+
+    updateCounters();
 };
 
 
@@ -176,4 +186,16 @@ let resetForm = () => {
     currentEditIndex = null;
 };
 
+
+//add counter
+
+const updateCounters = () => {
+    const todoTasks = tasks.filter(task => task.status === "to-do").length;
+    const inProgressTasks = tasks.filter(task => task.status === "doing").length;
+    const doneTasks = tasks.filter(task => task.status === "done").length;
+
+    todoCount.innerText = `(${todoTasks})`;
+    inProgressCount.innerText = `(${inProgressTasks})`;
+    doneCount.innerText = `(${doneTasks})`;
+};
 

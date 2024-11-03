@@ -1,188 +1,195 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/images/TaskWave_Logo.png">
-    <title>Task Wave</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="/images/TaskWave_Logo.png">
+        <title>Task Wave</title>
+    </head>
+    <body>
 
-    <nav class="bg-[#16171B] border-b-[1px] w-full pt-4 pb-4 pl-8 pr-8 flex justify-between decoration-solid ">
-    
-        <div class="w-24 ml-4">
-           <a href="#"><img src="images/TaskWave_Logo.png" alt="Logo"></a> 
-        </div>
-        <div class="text-white mr-4 flex gap-4 ">
-            <a href="#"><p class="border-l-2 pl-4 p-2 text-sm ">Houssam Bensaltana</p></a>
-            <a href="#"><i class="bg-white  rounded-full fa-solid fa-user  p-2 text-[#16171B] transition-colors hover:duration-700 hover:bg-[#16171B] hover:text-white hover:border-[1px] hover:rounded-full "></i></a>
-        </div>
+        <nav class="bg-[#16171B] border-b-[1px] w-full pt-4 pb-4 pl-8 pr-8 flex justify-between decoration-solid ">
         
+            <div class="w-24 ml-4">
+            <a href="#"><img src="images/TaskWave_Logo.png" alt="Logo"></a> 
+            </div>
+            <div class="text-white mr-4 flex gap-4 ">
+                <a href="#"><p class="border-l-2 pl-4 p-2 text-sm ">Houssam Bensaltana</p></a>
+                <a href="#"><i class="bg-white  rounded-full fa-solid fa-user  p-2 text-[#16171B] transition-colors hover:duration-700 hover:bg-[#16171B] hover:text-white hover:border-[1px] hover:rounded-full "></i></a>
+            </div>
+            
 
-    </nav>
+        </nav>
 
 
 
-    <div class="grid grid-cols-[auto_1fr] ">
+        <div class="grid grid-cols-[auto_1fr] ">
 
 
-    <aside class="bg-gradient-to-b from-[#16171B] to-[#1f2330] w-64 border-r-[1px] flex flex-col h-screen justify-between pt-16 pl-8 text-sm">
-        <div class="text-white">
-            <ul class=" flex flex-col gap-8 ">
-                <li><a href="#" class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-house pr-2"></i>home</a></li>
-                <li><a href="#" class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-chart-line pr-2"></i>Dashboard</a></li>
-                <li><a href="#" class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-bars-progress pr-2"></i>Settings</a></li>
-                <li><a href="#" class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-user pr-2"></i>Account</a></li>
-            </ul>
+        <aside class="bg-gradient-to-b from-[#16171B] to-[#1f2330] w-64 border-r-[1px] flex flex-col h-screen justify-between pt-16 pl-8 text-sm">
+            <div class="text-white">
+                <ul class=" flex flex-col gap-8 ">
+                    <li><a href="#" class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-house pr-2"></i>home</a></li>
+                    <li><a href="#" class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-chart-line pr-2"></i>Dashboard</a></li>
+                    <li><a href="#" class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-bars-progress pr-2"></i>Settings</a></li>
+                    <li><a href="#" class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-user pr-2"></i>Account</a></li>
+                </ul>
+            </div>
+            <div class="text-white pb-8">
+                <a href="#"  class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</a>
+            </div>
+            
+        </aside>
+
+
+
+        <main class="  bg-[url('/images/background.jpg')] bg-center">
+
+            <div class=" flex gap-14 pl-12 pt-8">
+                <div class="search">
+                    <input type="text" placeholder="Search" class="bg-[#16171B] text-white border-[1px] rounded-md pt-1 pb-1 pl-2 pr-14 " />
+                
+                </div>
+                <div><button id="openModal" class=" bg-[#ffffff] text-[#16171B] rounded-md pt-1 pb-1 pl-4 pr-4   hover:bg-[#16171B] hover:text-white hover:rounded-md hover:border-[1px] transition-colors duration-300">Add Tasks +</button></div>
         </div>
-        <div class="text-white pb-8">
-            <a href="#"  class=" hover:bg-white hover:text-[#16171B] rounded-xl pl-4 pr-8 pt-2 pb-2 hover:rounded-xl transition-colors duration-300"><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</a>
-        </div>
-         
-    </aside>
+            <!-- card taches -->
+            <div class="pr-12 pl-12 pt-12 grid grid-cols-3 gap-12">
+            
+                <div>
+                    <h1 class="text-white mb-4 pl-2 border-l-2">
+                        To Do <span id="todoCount" class="text-sm">(0)</span>
+                    </h1>
+                <div id="todoContainer" class="bg-[#ffdedecb] flex flex-col  pt-2 pb-2  gap-3  rounded-2xl rounded-tr-none rounded-br-none overflow-y-scroll h-96">
+            
+                    
+                    
+                </div>
+                </div>
+                
 
-
-
-    <main class="  bg-[url('/images/background.jpg')] bg-center">
-
-        <div class=" flex gap-14 pl-12 pt-8">
-            <div class="search">
-                <input type="text" placeholder="Search" class="bg-[#16171B] text-white border-[1px] rounded-md pt-1 pb-1 pl-2 pr-14 " />
-               
-              </div>
-              <div><button id="openModal" class=" bg-[#ffffff] text-[#16171B] rounded-md pt-1 pb-1 pl-4 pr-4   hover:bg-[#16171B] hover:text-white hover:rounded-md hover:border-[1px] transition-colors duration-300">Add Tasks +</button></div>
-    </div>
-        <!-- card taches -->
-        <div class="pr-12 pl-12 pt-12 grid grid-cols-3 gap-12">
-           
-            <div>
-                <h1 class="text-white mb-4 pl-2 border-l-2">To Do</h1>
-               <div id="todoContainer" class="bg-[#ffdedecb] flex flex-col  pt-2 pb-2  gap-3  rounded-2xl rounded-tr-none rounded-br-none overflow-y-scroll h-96">
-           
+                <div>
+                    <h1 class="text-white mb-4 pl-2 border-l-2">
+                        In Progress <span id="inProgressCount" class="text-sm">(0)</span>
+                    </h1>
+                <div id="inProgressContainair" class="bg-[#ffbec2c5] flex flex-col   pt-2 pb-2  gap-3  rounded-2xl rounded-tr-none rounded-br-none overflow-y-scroll h-96 ">
                 
                 
-               </div>
+                </div>
+                </div>
+
+                <div>
+                    <h1 class="text-white mb-4 pl-2 border-l-2">
+                        Done <span id="doneCount" class="text-sm">(0)</span>
+                    </h1>
+                <div id="doneContainer" class="bg-[#ff9da4c9] flex flex-col   pt-2 pb-2  gap-3  rounded-2xl rounded-tr-none rounded-br-none overflow-y-scroll h-96 ">
+                
+                
+                </div>
+                </div>
+
+
             </div>
             
 
-            <div>
-                <h1 class="text-white mb-4 pl-2 border-l-2">In Progress</h1>
-               <div id="inProgressContainair" class="bg-[#ffbec2c5] flex flex-col   pt-2 pb-2  gap-3  rounded-2xl rounded-tr-none rounded-br-none overflow-y-scroll h-96 ">
-              
-            
-               </div>
-            </div>
-
-            <div>
-                <h1 class="text-white mb-4 pl-2 border-l-2">Done</h1>
-               <div id="doneContainer" class="bg-[#ff9da4c9] flex flex-col   pt-2 pb-2  gap-3  rounded-2xl rounded-tr-none rounded-br-none overflow-y-scroll h-96 ">
-             
-            
-               </div>
-            </div>
-
+        </main>
 
         </div>
 
-    </main>
-
-    </div>
-
-    
-    <div id="myModal"  class="fixed inset-0 z-999 hidden bg-[#16171B] bg-opacity-45 flex items-center justify-center">
-        <div class="modal-content relative  mx-auto p-8 bg-white rounded shadow-lg  md:w-1/2 ">
-            <span class="close absolute top-2 right-2 text-gray-600 hover:text-[#16171B] cursor-pointer text-2xl">&times;</span>
-            <h1 class="text-xl font-semibold">Add Task</h1>
+        
+        <div id="myModal"  class="fixed inset-0 z-999 hidden bg-[#16171B] bg-opacity-45 flex items-center justify-center">
+            <div class="modal-content relative  mx-auto p-8 bg-white rounded shadow-lg  md:w-1/2 ">
+                <span class="close absolute top-2 right-2 text-gray-600 hover:text-[#16171B] cursor-pointer text-2xl">&times;</span>
+                <h1 class="text-xl font-semibold">Add Task</h1>
 
 
-            <form id="taskForm"  class="mt-4">
+                <form id="taskForm"  class="mt-4">
 
-        <div class="flex justify-between mr-8">
-            <div>
-                         <div class="mb-8 ">
-                    <input type="text" id="title"  class="mt-1 p-1 text-sm block w-64 border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4] " placeholder="Task Title">
-                    <div id="msg" class="text-xs text-red-700 mt-1">
+            <div class="flex justify-between mr-8">
+                <div>
+                            <div class="mb-8 ">
+                        <input type="text" id="title"  class="mt-1 p-1 text-sm block w-64 border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4] " placeholder="Task Title">
+                        <div id="msg" class="text-xs text-red-700 mt-1">
 
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                    
+                        <textarea id="description"  class=" mt-1 p-1 text-xs h-28 block w-64 border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]" placeholder="Task Description"></textarea>
+                    </div> 
+                </div>
+
+                <div>
+                            <div class="mb-4">
+                        
+                        <select id="status"  class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]">
+                            <option value="to-do">To Do</option>
+                            <option value="doing">In Progress</option>
+                            <option value="done">done</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                    
+                        <input type="date" id="dueDate"  class="mt-1 p-1 px-2 text-sm block w-full  border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]">
+                    </div>
+                    <div class="mb-4">
+                    
+                        <select id="priority"  class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm  focus:border-[#FF9DA4] ">
+                            <option value="P1" class="bg-red-500 text-white ">P1</option>
+                            <option value="P2" class="bg-orange-500 text-white">P2</option>
+                            <option value="P3" class="bg-green-500 text-white">P3</option>
+                        </select>
                     </div>
                 </div>
-                <div class="mb-4">
-                   
-                    <textarea id="description"  class="mt-1 p-1 text-xs h-28 block w-64 border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]" placeholder="Task Description"></textarea>
-                </div> 
+            
             </div>
+                        
+                <button type="submit" id="addTask" class="mt-4 flex justify-center py-1 px-8 bg-[#16171B]  text-white rounded hover:bg-white hover:text-[#16171B] hover:border-2 hover:border-[#16171B]">Add</button>
+        
 
-            <div>
-                          <div class="mb-4">
-                    
-                    <select id="status"  class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]">
-                        <option value="to-do">To Do</option>
-                        <option value="doing">In Progress</option>
-                        <option value="done">done</option>
-                    </select>
-                </div>
-                <div class="mb-4">
+                </form>
+
                 
-                    <input type="date" id="dueDate"  class="mt-1 p-1 px-2 text-sm block w-full  border-2 border-[#16171B] rounded-md shadow-sm focus:ring focus:ring-[#FF9DA4]">
-                </div>
-                <div class="mb-4">
-                  
-                    <select id="priority"  class="mt-1 p-1 px-2 text-sm block w-full border-2 border-[#16171B] rounded-md shadow-sm  focus:border-[#FF9DA4] ">
-                        <option value="P1" class="bg-red-500 text-white ">P1</option>
-                        <option value="P2" class="bg-orange-500 text-white">P2</option>
-                        <option value="P3" class="bg-green-500 text-white">P3</option>
-                    </select>
-                </div>
+                
             </div>
-          
         </div>
-                     
-            <button type="submit" id="addTask" class="mt-4 flex justify-center py-1 px-8 bg-[#16171B]  text-white rounded hover:bg-white hover:text-[#16171B] hover:border-2 hover:border-[#16171B]">Add</button>
+
+        
+        
     
 
-            </form>
-
-            
-            
-        </div>
-    </div>
-
-     
-    
- 
 
 
 
+        <footer class="bg-[#1f2330] border-t-[1px] w-full flex justify-around p-14 gap-32">
 
-    <footer class="bg-[#1f2330] border-t-[1px] w-full flex justify-around p-14 gap-32">
+            <div class="w-24 ml-4">
+                <a href="#"><img src="images/TaskWave_Logo.png" alt="Logo"></a> 
+            </div>
 
-        <div class="w-24 ml-4">
-            <a href="#"><img src="images/TaskWave_Logo.png" alt="Logo"></a> 
-         </div>
+            <div class="text-white text-sm">
+                <ul class=" flex gap-8 ">
+                    <li><a href="#" class="">home</a></li>
+                    <li><a href="#" class="">Dashboard</a></li>
+                    <li><a href="#" class="">Settings</a></li>
+                    <li><a href="#" class="">Account</a></li>
+                </ul>
+            </div>
 
-         <div class="text-white text-sm">
-            <ul class=" flex gap-8 ">
-                <li><a href="#" class="">home</a></li>
-                <li><a href="#" class="">Dashboard</a></li>
-                <li><a href="#" class="">Settings</a></li>
-                <li><a href="#" class="">Account</a></li>
-            </ul>
-        </div>
-
-        <div class="text-white text-xs">
-            <p>2024 Codeshogun. All rights reserved </p>
-        </div>
-    </footer>
-
+            <div class="text-white text-xs">
+                <p>2024 Codeshogun. All rights reserved </p>
+            </div>
+        </footer>
 
 
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 
-    
-</body>
-</html>
+        
+    </body>
+    </html>
