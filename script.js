@@ -89,10 +89,10 @@ let createTasks = () => {
 
     tasks.forEach((task, index) => {
         const taskHTML = `
-            <div class="bg-gradient-to-b from-[#16171B] to-[#2c3144] w-60 text-xs  border-2 ${getPriorityClass(task.priority)} p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
-                <span class="text-lg font-bold">${task.text}</span>
+            <div class=" bg-gradient-to-b from-[#16171B] to-[#2c3144] w-60 text-xs  border-2 ${getPriorityClass(task.priority)} p-4 ml-2 mr-2 flex flex-col gap-2 text-white rounded-2xl transition-transform duration-300 hover:scale-105">
+                <span class="text-lg font-bold text-ellipsis whitespace-normal break-words">${task.text}</span>
                 <span>${task.date}</span>
-                <p class "text-green">${task.description}</p>
+                <p class "overflow-hidden text-ellipsis whitespace-normal break-words">${task.description}</p>
                 <span class="options flex justify-end gap-4 hover:cursor-pointer ">
                     <i id="deleteButton" class="fa-solid fa-trash hover:text-pink-400" onclick="deleteTask(${index})"></i>
                     <i class="fa-solid fa-pen-to-square hover:text-pink-400" onclick="editTask(${index})" ></i>
